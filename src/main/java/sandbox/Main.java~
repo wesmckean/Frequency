@@ -18,7 +18,7 @@ import java.util.Map;
  * @author wmckean
  */
 public class Main { 
-    private static final class Frequency  implements Comparable<Frequency> {
+    private static final class Frequency  implements Comparable {
         private final String word;
         private Integer count;
         
@@ -47,8 +47,14 @@ public class Main {
         }
 
         @Override
-        public int compareTo(Frequency f) {
-            return f.count - count;
+        public int compareTo(Object o) {
+            int result = 0;
+            
+            if(o instanceof Frequency f) {
+                result = f.count - count;
+            }
+            
+            return result;
         }
     }
     

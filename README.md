@@ -1,11 +1,6 @@
 # Frequency
 
-Compiled an run with Java 14+.  If you want to use an earlier version of Java (8 or 11), then change the instanceof
-operation in the Frequency::compareTo to the older instance of operation:
-
-if(o instanceof Frequency) {
-	result = ((Frequency)o).count - count;
-}
+Compiled an run with Java 11.
 
 COMPILE the source with:
 
