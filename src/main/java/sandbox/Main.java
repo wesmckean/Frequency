@@ -89,7 +89,7 @@ public class Main {
             lastIndex = bi.next();
             
             if (lastIndex != BreakIterator.DONE && Character.isLetterOrDigit(data.charAt(firstIndex))) {
-                String word = data.substring(firstIndex, lastIndex);
+                String word = data.substring(firstIndex, lastIndex).toLowerCase();
                 Frequency f = result.computeIfAbsent(word, (w)->new Frequency(w,0));
                 f.increment();
             }            
